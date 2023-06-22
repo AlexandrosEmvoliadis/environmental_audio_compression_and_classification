@@ -28,7 +28,7 @@ There are 2 tested Classification Tasks
       - On compressed representation
    Experiments on Reconstructed & Compressed representation, define the Overall System (Compression & Classification) tests
   
-Run:
+# Run
 
 1) Visit https://github.com/mohaimenz/acdnet, follow instructions for data preparation.
 2) In opts.py, set opt.binary = True, opt.nClasses = 2 to conduct binary classification experiments. In val_generator.py, set opt.batchsize = 1600 or lower

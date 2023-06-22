@@ -1,6 +1,7 @@
 # Environmental Audio_Compression & Classification
 Repository that contains scripts to reproduce results presented on "A Robust Deep Learning based System for Environmental Audio Compression and Classification"
 Both Auto-Encoder models(5-Folds) are contained in the folder **autoencoders**
+
 # Auto-Encoder
 
 1) Retrieve data structure from the following link:
@@ -10,5 +11,17 @@ https://drive.google.com/drive/folders/15yfoJC5PvlbIR0AZv3BGIXcbGB9ib5Pa?usp=sha
 **autoencoders** folder
 4) autoencoders.py will return PSNR, SSIM & PESQ metrics for test sets (5-fold cross validation)
 
+# Classifier
 
+There are 2 tested Classification Tasks
+1) ESC-50 total Classification, involving:
+   - ACDNet
+   - SE-ACDNet
+   - CNN-1D
+2) Binary Classification (PR & NPR), involving:
+   - ACDNet
+   - SE-ACDNet
+   - CNN-1D
+      - On reconstructed Audio
+      - On compressed representation
    

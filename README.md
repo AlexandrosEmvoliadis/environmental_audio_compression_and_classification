@@ -1,5 +1,5 @@
 # Environmental Audio_Compression & Classification
-Repository that contains scripts to reproduce results presented on "A Robust Deep Learning based System for Environmental Audio Compression and Classification"
+Repository that contains scripts to reproduce results & more, presented on "A Robust Deep Learning based System for Environmental Audio Compression and Classification"
 Both Auto-Encoder models(5-Folds) are contained in the folder **autoencoders**
 
 # Auto-Encoder

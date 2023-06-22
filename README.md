@@ -18,10 +18,14 @@ There are 2 tested Classification Tasks
    - ACDNet
    - SE-ACDNet
    - CNN-1D
-2) Binary Classification (PR & NPR), involving:
+2) Binary Classification (PR & NPR), involving :
    - ACDNet
+      - On Original & Reconstructed Audio
    - SE-ACDNet
+      - On Original & Reconstructed Audio
    - CNN-1D
       - On reconstructed Audio
       - On compressed representation
-   
+   Experiments on Reconstructed & Compressed representation, define the Overall System (Compression & Classification) tests
+
+

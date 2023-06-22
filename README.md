@@ -31,6 +31,17 @@ There are 2 tested Classification Tasks
 Run:
 
 1) Visit https://github.com/mohaimenz/acdnet, follow instructions for data preparation.
-2) Set opt.binary = True and opt.nClasses = 2 to conduct binary classification experiments
-3) 
-
+2) In opts.py, set opt.binary = True, opt.nClasses = 2 to conduct binary classification experiments. In val_generator.py, set opt.batchsize = 1600 or lower
+3) For Original audio as input:
+   - In ./torch/trainer.py, exclude enc model (comment) and make sure to remove (comment out) enc model from training & validation processes
+   - Using ACDNet and SE-ACDNet:
+     - Reshape the input to match(Batch_size,1,1,22050)
+4) For Reconstructed audio as input:
+   - Include enc model. Specify model's path in opts.py (there's an already example)
+   - Using CAE as Auto-Encoder:
+      - in ./torch/resources/models.py go to get_ae and remove the lines referring to squeeze-and-excitation networks
+5) For Compressed audio as input:
+   - in ./torch/resources/models.py specify as output of the auto-encoder the bottleneck output
+Don't forget to include the autoencoder in the trainer.py __validate function and, if using (SE)ACDNet, reshape to match models' input
+6) Run ./torch/tester.py following the screen-instructions to test models' performance
+      

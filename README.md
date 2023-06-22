@@ -1,6 +1,6 @@
 # Environmental Audio_Compression & Classification
 Repository that contains scripts to reproduce results & more, presented on "A Robust Deep Learning based System for Environmental Audio Compression and Classification"
-Both Auto-Encoder models(5-Folds) are contained in the folder **autoencoders**
+Both Auto-Encoder models(5-Folds) are contained in the folder **pretrained_autoencoders**
 
 # Auto-Encoder
 
@@ -27,5 +27,10 @@ There are 2 tested Classification Tasks
       - On reconstructed Audio
       - On compressed representation
    Experiments on Reconstructed & Compressed representation, define the Overall System (Compression & Classification) tests
+  
+Run:
 
+1) Visit https://github.com/mohaimenz/acdnet, follow instructions for data preparation.
+2) Set opt.binary = True and opt.nClasses = 2 to conduct binary classification experiments
+3) 
 

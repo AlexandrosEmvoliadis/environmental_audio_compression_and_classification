@@ -30,17 +30,20 @@ There are 2 tested Classification Tasks
 
 1) Visit https://github.com/mohaimenz/acdnet, follow instructions for data preparation.
 2) In opts.py, set opt.binary = True, opt.nClasses = 2 to conduct binary classification experiments. In val_generator.py, set opt.batchsize = 1600 or lower
-3) For Original audio as input:
-   - In ./torch/trainer.py, exclude enc model (comment) and make sure to remove (comment out) enc model from training & validation processes
-   - Using ACDNet and SE-ACDNet:
-     - Reshape the input to match(Batch_size,1,1,22050)
-4) For Reconstructed audio as input:
-   - Include enc model. Specify model's path in opts.py (there's an already example)
-   - Using CAE as Auto-Encoder:
-      - in ./torch/resources/models.py go to get_ae and remove the lines referring to squeeze-and-excitation networks
-5) For Compressed audio as input:
-   - in ./torch/resources/models.py specify as output of the auto-encoder the bottleneck output
-Don't forget to include the autoencoder in the trainer's __validate function and, if using (SE)ACDNet, reshape to match models' input
+3) Run ./common/prepare_dataset.py to generate data in appropriate format
+4) Run ./common/val_generator.py to generate validation & testing data in appropriate format
+5) Run ./torh/trainer.py and follow on screen instructions
+   - For Original audio as input:
+      - In ./torch/trainer.py, exclude enc model (comment) and make sure to remove (comment out) enc model from training & validation processes
+      - Using ACDNet and SE-ACDNet:
+        - Reshape the input to match(Batch_size,1,1,22050)
+   - For Reconstructed audio as input:
+      - Include enc model. Specify model's path in opts.py (there's an already example)
+      - Using CAE as Auto-Encoder:
+         - in ./torch/resources/models.py go to get_ae and remove the lines referring to squeeze-and-excitation networks
+   - For Compressed audio as input:
+      - in ./torch/resources/models.py specify as output of the auto-encoder the bottleneck output
+   Don't forget to include the autoencoder in the trainer's __validate function and, if using (SE)ACDNet, reshape to match models' input
 6) Run ./torch/tester.py following the screen-instructions to test models' performance
 
 **This repository is currently under construction, updates will follow soon**

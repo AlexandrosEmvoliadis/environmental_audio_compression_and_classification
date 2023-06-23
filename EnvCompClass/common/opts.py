@@ -19,7 +19,7 @@ def parse():
     opt.weightDecay = 5e-4;
     opt.momentum = 0.9;
     opt.nEpochs = 2000;
-    opt.LR = 1e-4;
+    opt.LR = 0.1;
     opt.schedule = [0.3, 0.6, 0.9];
     opt.warmup = 10;
 

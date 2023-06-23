@@ -40,7 +40,7 @@ There are 2 tested Classification Tasks
    - For Reconstructed audio as input:
       - Include enc model. Specify model's path in opts.py (there's an already example)
       - Using CAE as Auto-Encoder:
-         - in ./torch/resources/models.py go to get_ae and remove the lines referring to squeeze-and-excitation networks
+         - in ./torch/resources/models.py go to get_ae and remove the lines referring to squeeze-and-excitation networks (in class Autoencoders and in function get_ae)
    - For Compressed audio as input:
       - in ./torch/resources/models.py specify as output of the auto-encoder the bottleneck output
    Don't forget to include the autoencoder in the trainer's __validate function and, if using (SE)ACDNet, reshape to match models' input

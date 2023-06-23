@@ -42,4 +42,6 @@ There are 2 tested Classification Tasks
    - in ./torch/resources/models.py specify as output of the auto-encoder the bottleneck output
 Don't forget to include the autoencoder in the trainer's __validate function and, if using (SE)ACDNet, reshape to match models' input
 6) Run ./torch/tester.py following the screen-instructions to test models' performance
+
+**This repository is currently under construction, updates will follow soon**
       

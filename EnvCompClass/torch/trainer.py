@@ -66,8 +66,8 @@ class Trainer:
         print("{} has been started. You will see update after finishing every training epoch and validation".format(training_text));
 
         lossFunc = torch.nn.KLDivLoss(reduction='batchmean');
-        optimizer = optim.Adam(net.parameters(), lr=self.opt.LR, weight_decay=self.opt.weightDecay, amsgrad = True);
-
+        optimizer = optim.SGD(net.parameters(), lr=self.opt.LR, weight_decay=self.opt.weightDecay, momentum=self.opt.momentum, nesterov=True);
+        
         # self.opt.nEpochs = 1957 if self.opt.split == 4 else 2000;
         for epochIdx in range(self.opt.nEpochs):
             epoch_start_time = time.time();
